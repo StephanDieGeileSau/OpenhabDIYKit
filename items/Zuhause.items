@@ -1,0 +1,10 @@
+Group   Home            "Mein Smart-Home"       <house>
+
+Group   AT              "Dachgeschoss"        <attic>         (Home)
+
+Group   Bedroom         "Stephan's Zimmer"    <bedroom_blue>       (Home)
+Group   Corridor        "Gang"                <corridor>      (Home)
+Group   Kitchen         "Küche"               <kitchen>       (Home)
+Group   Living          "David's Zimmer"      <sofa>      (Home)
+Group   MasterBedroom   "Ty's Zimmer"         <bedroom_red>   (Home)
+

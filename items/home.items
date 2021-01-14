@@ -1,0 +1,25 @@
+
+//--Magic Home
+
+Group    Sensors             (Home)
+Group    Devices              (Home)
+
+Group    MagicHome_LED       "LED"              <rgb> (Living, Devices)
+Switch   MHLEDPower          "Power"        <light>   (MagicHome_LED)   {channel="wifiled:wifiled:10521CCDFB73:power", homekit="Lighting"}
+Color    MHLEDColor          "Color"           (MagicHome_LED)    {channel="wifiled:wifiled:10521CCDFB73:color", homekit="Lighting, Lighting.Hue, Lighting.Brightness, Lighting.Saturation"}
+Dimmer   MHLEDWhite          "White"           (MagicHome_LED)    {channel="wifiled:wifiled:10521CCDFB73:white", homekit="Lighting, Lighting.ColorTemperature"}
+Dimmer   MHLEDWhite2         "White 2"         (MagicHome_LED)    {channel="wifiled:wifiled:10521CCDFB73:white2"}
+String   MHLEDProgram        "Program"         (MagicHome_LED)    {channel="wifiled:wifiled:10521CCDFB73:program"}
+Dimmer   MHLEDProgramSpeed   "Program speed"   (MagicHome_LED)    {channel="wifiled:wifiled:10521CCDFB73:programSpeed"}
+
+Group    TempSensor          "Temperatur"           <temperature> (Living, Sensors)
+Number   TempHumSensorTempChannelDHT11   "Temp"  <temperature> (TempSensor)  {channel="mqtt:topic:Temp_Hum:TempChannel_DHT11", homekit="TemperatureSensor"}
+
+Group    HumSensor           "Luftfeuchtigkeit"     <humidity> (Living, Sensors)
+Number   TempHumSensorHumChannelDHT11    "Hum" <humidity> (HumSensor)  {channel="mqtt:topic:Temp_Hum:HumChannel_DHT11", homekit="HumiditySensor"}
+
+Group:Switch:OR(ON,OFF)   gPresence           "gPresence"  <icon_presence> (Home)
+
+Switch StephanOnline "Online" (gPresence) {channel="network:pingdevice:192_168_178_68:online"}
+Switch StephansLaptopOnline "Online" (gPresence) {channel="network:pingdevice:192_168_178_27:online"}
+Switch TyroneOnline "Online" (gPresence)    {channel="network:pingdevice:192_168_178_70:online"}

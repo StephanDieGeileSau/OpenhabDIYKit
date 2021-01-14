@@ -1,0 +1,23 @@
+
+
+// atmosphere
+Number   Humidity    	  "Luftfeuchtigkeit [%d %%]"  <humidity>	  {weather="locationId=zuhause, type=atmosphere, property=humidity"}
+Number   Visibility    	  "Sicht [%.2f km]" <sunrise> {weather="locationId=zuhause, type=atmosphere, property=visibility"}
+Number   Pressure    	  "Luftdruck [%.2f mb]"  <gas>  {weather="locationId=zuhause, type=atmosphere, property=pressure"}
+Number   UV_Index         "UV Index"         <sun>      {weather="locationId=zuhause, type=atmosphere, property=uvIndex, scale=0"}
+
+// clouds
+Number   Clouds   "Wolken [%.0f %%]"  <sun_clouds> {weather="locationId=zuhause, type=clouds, property=percent"}
+
+
+// precipitation
+Number   Rain          "Regen [%.2f mm/h]" <rain>  {weather="locationId=zuhause, type=precipitation, property=rain"}
+Number   Snow          "Schnee [%.2f mm/h]"  <snow> {weather="locationId=zuhause, type=precipitation, property=snow"}
+
+// temperature
+Number   Temperature      "Temperatur [%.2f °C]"   <temperature>    {weather="locationId=zuhause, type=temperature, property=current"}
+
+// wind
+Number   Wind_Speed           "Windgeschwindigkeit [%.2f km/h]"   <wind> {weather="locationId=zuhause, type=wind, property=speed"}
+
+
