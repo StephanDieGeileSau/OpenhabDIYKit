@@ -7,6 +7,8 @@
   
   The above copyright notice and this permission notice shall be included in all
   copies or substantial portions of the Software.
+  
+  Edited by Stephan Lenert.
 */
 
 #include "DHT.h"
@@ -20,10 +22,8 @@ extern "C" {
 #define WIFI_SSID "1-800-273-8255"
 #define WIFI_PASSWORD "WohnungsLAN"
 
-// Raspberry Pi Mosquitto MQTT Broker
-#define MQTT_HOST IPAddress(192, 168, 178, 76)
-// For a cloud MQTT broker, type the domain name
-//#define MQTT_HOST "example.com"
+// Hier IP Adresse des Raspberry Pi in der Form eintragen
+#define MQTT_HOST IPAddress(192, 168, 178, 1)
 #define MQTT_PORT 1883
 
 // Temperature MQTT Topics
