@@ -1,0 +1,36 @@
+sitemap zuhause_admin label="Zuhause" {
+    Frame label="Wohnung"
+        {
+        Group item=Bedroom
+        Group item=Living
+        Group item=MasterBedroom
+        Group item=Corridor
+        Group item=Kitchen
+        
+    }
+
+    Frame label="Jemand Zuhause?" 
+    	{
+    	Switch item=gPresence icon="parents_1_1" label="Anwesend"
+    	Text label="Personen" icon="parents_1_1" 
+    		{
+    		Switch item=Stephan_Online icon="boy_3" label="Stephan"
+    		Switch item=StephansLaptopOnline icon="suitcase" label="Stephan's Laptop"
+    		Switch item=Tyrone_Online icon="boy_6" label="Tyrone"
+
+            }
+         }
+
+    Frame label="Wetter"
+        {
+        Text item=Humidity
+        Text item=Visibility
+        Text item=Pressure
+        Text item=Clouds
+        Text item=Rain
+        Text item=Snow
+        Text item=Temperature
+        Text item=Wind_Speed
+    }
+
+}
